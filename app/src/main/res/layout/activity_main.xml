@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.bookquiz.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff2cc"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="Welcome to the Book Quiz app!"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="#483d8b"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:text="1.Who is the author of the book 'One hundred years of Solitude'?"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+
+                android:id="@+id/GG_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gabriel Garcia Marquez"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textStyle="italic" />
+
+            <RadioButton
+
+                android:id="@+id/EB_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enid Blyton"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textStyle="italic" />
+
+            <RadioButton
+
+                android:id="@+id/SK_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stephen King "
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textStyle="italic" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:text="2.Can you name the author of the book 'David Copperfield'?"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/CD_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter author name"
+            android:inputType="text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="3.Choose Agatha Christie's novels"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:text="Note: Select two of the three given options."
+            android:textSize="12dp"
+            android:textStyle="italic" />
+
+        <CheckBox
+            android:id="@+id/EN_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Endless Night"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textStyle="italic"
+            android:onClick="onCheckBox"/>
+
+        <CheckBox
+            android:id="@+id/PBE_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A pair of Blue Eyes"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textStyle="italic"
+            android:onClick="onCheckBox"/>
+
+        <CheckBox
+            android:id="@+id/DCE_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Death comes as The End"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textStyle="italic"
+            android:onClick="onCheckBox"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:text="4.Who wrote the book 'The Winter's Tale'?"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+
+                android:id="@+id/VW_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Virginia Woolf"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textStyle="italic" />
+
+            <RadioButton
+
+                android:id="@+id/WS_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="William Shakespeare"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textStyle="italic" />
+
+            <RadioButton
+
+                android:id="@+id/LS_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leo Tolstoy"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textStyle="italic" />
+
+        </RadioGroup>
+
+
+
+        <Button
+
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:onClick="evaluateScore"
+            android:text="Submit"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:paddingRight="16dp"/>
+
+
+
+        <TextView
+            android:id="@+id/score_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:text=" "
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
+</ScrollView>
